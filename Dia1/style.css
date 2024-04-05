@@ -10,8 +10,8 @@ footer {
     padding: 10px;
     text-align: center;
     color: #333;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
 }
 
@@ -26,33 +26,33 @@ main {
     margin-bottom: 1rem;
 }
 
+h2 {
+    color: #333;
+}
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     border: 1px solid #f1f1f1;
     border-radius: 5px;
+
 }
 
-.header-table {
-    background-color: cornflowerblue;
-    margin: 1px;
-    display: flex;
-    align-items: center;
-
-    h3{
-        width: 100%;
-        text-align: center;
-        color: #f1f1f1;
-        font-size: medium;
-    }
+#my-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.content-table{
-    p{
-        padding: 0 10px ;
-        font-size: small;
-        text-align: justify;
-    }
+#my-table th,
+#my-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
+#my-table th {
+    width: 25%;
+    background-color: #9c86f9;
+    color: white;
+}
+
+#my-table tr:hover {
+    background-color: #ddd;
+}
