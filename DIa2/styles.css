@@ -1,0 +1,57 @@
+header, footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* styles.css */
+
+.container {
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto y la línea */
+}
+
+.text {
+    font-size: 18px;
+    margin: 0; /* Espacio entre el texto y la línea */
+}
+
+.line {
+    border-bottom: 1px solid #000; /* Línea horizontal */
+    flex-grow: 1; /* La línea ocupa todo el espacio restante */
+	margin: 0 0 0 10px;
+}
+
+.prueba {
+	width: 100%;
+}
+
+.prueba2 {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foto{
+	border-radius: 50%;
+    width: 150px;
+    height: 150px;
+	background-image: url(../DIa2/img/p.jpg);
+	background-size: cover;
+}
