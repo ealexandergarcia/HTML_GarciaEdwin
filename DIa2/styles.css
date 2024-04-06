@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --imagen-tamaño: 150px;
+    --imagen-tamaño: 300px;
     --icon-url: url(../DIa2/img/svg/person-svgrepo-com.svg);
   }
 
@@ -60,13 +60,21 @@ h1, h2 {
 }
 
 #exp-info{
-    .icon{
-        --icon-url: url(../DIa2/img/svg/work-svgrepo-com.svg);
-    }
+    --icon-url: url(../DIa2/img/svg/work-svgrepo-com.svg);
 }
 #edu-info{
-        --icon-url: url(../DIa2/img/svg/education-cap-svgrepo-com.svg);
+    --icon-url: url(../DIa2/img/svg/education-cap-svgrepo-com.svg);
+    
+}
+#curs-info{
+    --icon-url: url(../DIa2/img/svg/world-svgrepo-com.svg);
+}
+#ref-info{
+    --icon-url: url(../DIa2/img/svg/share-arrow-solid-svgrepo-com.svg);
+}
 
+.card {
+    margin-bottom: 15px;
 }
 
 /* Estilos mobil */
@@ -79,6 +87,10 @@ h1, h2 {
         border: 1px solid #ddd;
         border-radius: 5px;
     }
+
+    h2 {
+        text-align: center;
+    }
     .body {
         width: 100%;
         margin: 0;
@@ -88,9 +100,14 @@ h1, h2 {
         --imagen-tamaño: 200px;
         margin: auto;
     }
+    .card {
+        width: 100%;
+    }
 }
 
 /* Estilos desktop */
 @media only screen and (min-width: 768px) {
-
+    .card {
+        width: 50%;
+    }
 }
