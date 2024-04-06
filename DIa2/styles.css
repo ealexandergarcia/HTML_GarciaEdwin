@@ -1,3 +1,10 @@
+/* Variables */
+:root {
+    --imagen-tamaño: 150px;
+    --icon-url: url(../DIa2/img/svg/person-svgrepo-com.svg);
+  }
+
+/* Estilos common */
 header, footer {
     background-color: #f1f1f1;
     padding: 10px;
@@ -5,53 +12,85 @@ header, footer {
     color: #333;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 h1, h2 {
     color: #333;
+    font-size: xxx-large;
 }
 
-/* styles.css */
 
 .container {
     display: flex;
-    align-items: center; /* Centra verticalmente el texto y la línea */
+    align-items: center;
 }
 
 .text {
     font-size: 18px;
-    margin: 0; /* Espacio entre el texto y la línea */
+    margin: 0;
 }
 
-.line {
-    border-bottom: 1px solid #000; /* Línea horizontal */
-    flex-grow: 1; /* La línea ocupa todo el espacio restante */
-	margin: 0 0 0 10px;
+
+.foto {
+    border-radius: 50%;
+    width: var(--imagen-tamaño);
+    height: var(--imagen-tamaño);
+    background-image: url(../DIa2/img/p.jpg);
+    background-size: cover;
 }
 
-.prueba {
-	width: 100%;
+.icon {
+    border-radius: 50%;
+    background: #2E2328 var(--icon-url) no-repeat center/cover;
+    width: 40px;
+    height: 40px;
 }
 
-.prueba2 {
-	display: flex;
-    justify-content: space-between;
+.info{
+    display: flex;
     align-items: center;
+
+    h3 {
+        margin-left: 10px;
+    }
 }
 
-.foto{
-	border-radius: 50%;
-    width: 150px;
-    height: 150px;
-	background-image: url(../DIa2/img/p.jpg);
-	background-size: cover;
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#exp-info{
+    .icon{
+        --icon-url: url(../DIa2/img/svg/work-svgrepo-com.svg);
+    }
+}
+#edu-info{
+        --icon-url: url(../DIa2/img/svg/education-cap-svgrepo-com.svg);
+
+}
+
+/* Estilos mobil */
+@media only screen and (max-width: 768px) {
+    main {
+
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .foto {
+        --imagen-tamaño: 200px;
+        margin: auto;
+    }
+}
+
+/* Estilos desktop */
+@media only screen and (min-width: 768px) {
+
 }
