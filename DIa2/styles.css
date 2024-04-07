@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --imagen-tamaño: 300px;
+    --imagen-tamaño: 250px;
     --icon-url: url(../DIa2/img/svg/person-svgrepo-com.svg);
   }
 
@@ -12,6 +12,9 @@ header, footer {
     color: #333;
 }
 
+body{
+    background: rgb(241, 241, 241);
+}
 h1, h2 {
     color: #333;
     font-size: xxx-large;
@@ -33,7 +36,7 @@ h1, h2 {
     border-radius: 50%;
     width: var(--imagen-tamaño);
     height: var(--imagen-tamaño);
-    background-image: url(../DIa2/img/p.jpg);
+    background-image: url(../DIa2/img/as.jpg);
     background-size: cover;
 }
 
@@ -106,8 +109,29 @@ h1, h2 {
 }
 
 /* Estilos desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     .card {
         width: 50%;
+    }
+
+    .card-foto-nombre {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        font-size: large;
     }
 }
