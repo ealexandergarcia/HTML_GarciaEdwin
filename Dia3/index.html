@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Tablas en HTML5</h1>
+    <table id="myTable">
+        <thead>
+            <tr id="headerRow"></tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+    <script>
+        fetch('data.json')
+         .then(response => response.json())
+         .then(data => {
+                const tableBody = document.getElementById('table-body');
+                const headerRow = document.getElementById('headerRow');
+                const columnNames = Object.keys(data[0]);
+
+                columnNames.forEach(name => {
+                    const cell = document.createElement('th');
+                    cell.textContent = name;
+                    headerRow.appendChild(cell);
+                });
+
+                data.forEach(entry => {
+                    const row = document.createElement('tr');
+                    columnNames.forEach(name => {
+                        const cell = document.createElement('td');
+                        cell.textContent = entry[name];
+                        row.appendChild(cell);
+                    });
+                    tableBody.appendChild(row);
+                });
+            });
+    </script>
+</body>
+</html>
