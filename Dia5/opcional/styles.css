@@ -13,6 +13,7 @@
   grid-area: im1;
   background: #d2ff02;
   padding: 32px;
+  border-radius: 15px;
 }
 
 .img2 {
@@ -25,10 +26,15 @@
 
 .img3 {
   grid-area: img3;
+  display: flex;
+  background: #1f1f1f;
+  border-radius: 15px;
 }
 
 .img4 {
   grid-area: img4;
+  background: #1f1f1f;
+  border-radius: 15px;
 }
 
 main {
@@ -43,25 +49,39 @@ main {
 }
 
 
-.card{
+.card {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
 
-  .icons, .text {
+  .icons,
+  .text {
     background: #a16bff;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
-  .icons{
+  .icons {
     width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .candado {
+      width: 30px;
+      height: 26px;
+      background-image: url(./svg/candado.svg);
+      background-repeat: no-repeat;
+    }
   }
 
-  .text{
+  .text {
     width: 80%;
 
-    p{
-      padding-left:16px;
+    p {
+      text-align: center;
+      font-weight: bold;
+      font-size: large;
     }
   }
 }
